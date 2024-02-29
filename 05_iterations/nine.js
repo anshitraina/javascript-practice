@@ -33,3 +33,5 @@ const shoppingCart = [
 const billToPay =  shoppingCart.reduce((accumulator,item)=>{return accumulator+item.price
 },0)
 console.log(billToPay);
+
+// ====================End======================
