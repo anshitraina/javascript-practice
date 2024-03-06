@@ -80,11 +80,7 @@ buttons.forEach(function (button) {
                 break;
             case 'white':
                 body.style.backgroundColor='white'
-                break;
-                                       
-                        
-                        
-
+                break;                   
         
             default:
                 break;
