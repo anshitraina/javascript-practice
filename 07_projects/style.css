@@ -1,0 +1,74 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.canvas {
+    /* height: 1vh; */
+    background-color: #f0f0f0; /* Default background color */
+}
+
+h1 {
+    color: #333;
+}
+
+.button {
+    display: inline-block;
+    width: 50px; /* Set the width to make it square */
+    height: 50px; /* Set the height to make it square */
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#grey {
+    background-color: #808080;
+}
+
+#red {
+    background-color: #ff0000;
+}
+
+#blue {
+    background-color: #0000ff;
+}
+
+#yellow {
+    background-color: #ffff00;
+}
+
+#purple {
+    background-color: #800080;
+}
+#cyan {
+    background-color: #00ffff;
+}
+#orange {
+    background-color: #ffa500;
+}
+#green{
+    background-color: #008000;
+}
+#pink{
+    background-color: #ffc0cb;
+}
+#white{
+    background-color: #ffffff;
+}
+
+h2 {
+    color: #333;
+}
+
+span {
+    font-style: italic;
+    color: #777;
+}
