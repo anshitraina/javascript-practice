@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Card</title>
+    <style>
+        /* CSS styling for the card */
+        .card {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body style="background-color: #212121;">
+    <div class="card">
+        <h2>GitHub Profile</h2>
+        <div id="profile-pic"></div>
+        <div id="followers"></div>
+    </div>
+</body>
+<script>
+   const requestUrl = 'https://api.github.com/users/anshitraina';
+   const xhr = new XMLHttpRequest();
+   xhr.open('GET', requestUrl);
+   xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4){
+        if (xhr.status === 200) {
+            const data = JSON.parse(this.responseText);
+            const profilePic = document.getElementById('profile-pic');
+            const followers = document.getElementById('followers');
+
+            // Display profile picture
+            const img = document.createElement('img');
+            img.src = data.avatar_url;
+            profilePic.appendChild(img);
+
+            // Display number of followers
+            followers.textContent = `Followers: ${data.followers}`;
+        } else {
+            console.error('Failed to fetch user data');
+        }
+    }
+   }
+   xhr.send();
+</script>
+</html>
