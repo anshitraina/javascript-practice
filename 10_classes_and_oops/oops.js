@@ -15,3 +15,27 @@ const user={
 
 console.log(user.username);
 console.log(user.getUserDetails());
+
+//constructor 
+
+function User(username, loginCount, isLoggedIn) {
+    this.username= username;
+    this.loginCount=loginCount;
+    this.isLoggedIn=isLoggedIn
+
+    this.greeting= function () {
+        console.log(`Welcome ${this.username}`);
+        
+    }
+
+    return this
+
+}
+ 
+const userOne =new User("Anshit", 12,true)
+const userTwo=new User("hitesh", 32, true)
+console.log(userOne);
+
+
+
+ 
